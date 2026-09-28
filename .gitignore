@@ -1,0 +1,18 @@
+# virtual environment — never commit
+.venv/
+
+# Python cache files
+__pycache__/
+
+# logs produced by the program
+logs/
+
+# credentials / secrets
+kaggle.json
+.env
+
+# large data files (examples)
+*.csv
+*.zip
+*.tar
+*.gz
