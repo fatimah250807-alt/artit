@@ -8,12 +8,10 @@ import text_utils
 
 
 def test_clean_name_whitespace():
-    # collapses inner and outer whitespace
-    assert text_utils.clean_name("   sara   ali   ") == "Sara Ali"
-    assert text_utils.clean_name("  FATIMA    AL   ZAHRA  ") == "Fatima Al Zahra"
+    assert text_utils.clean_name("  sara ali  ") == "Sara Ali"
+    assert text_utils.clean_name("sara   ali") == "Sara Ali"
 
 
 def test_clean_name_capitalisation():
-    # fixes all-caps and all-lowercase
-    assert text_utils.clean_name("sara ali") == "Sara Ali"
-    assert text_utils.clean_name("FATIMA AL ZAHRA") == "Fatima Al Zahra"
+    assert text_utils.clean_name("FAISAL ALHARBI") == "Faisal Alharbi"
+    assert text_utils.clean_name("lama alqahtani") == "Lama Alqahtani"
